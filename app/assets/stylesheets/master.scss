@@ -1,6 +1,7 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -11,6 +12,7 @@
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+  color: #af5026;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,3 +30,9 @@ body {
   background: image_url('grey_wash_wall.png');
   box-shadow: 0px 1px 3px #2a2a2a;
 }
+
+.navbar-inverse .navbar-brand {
+    color: white;
+    font-family: 'kaushan_scriptregular', cursive;
+    font-size: 36px;
+  }
