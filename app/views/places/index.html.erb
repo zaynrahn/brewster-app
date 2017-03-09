@@ -1,4 +1,4 @@
-<% @place.each do |place| %>
+<% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
     <h1 style="color: #4c3327"><%= place.name %></h1>
     <i><%= place.address %></i><br/><br/>
@@ -6,3 +6,8 @@
   </div>
 
 <% end %>
+
+<div class="digg_pagination">
+  <span class="disabled prev_page">← Previous</span>  
+    <a href="./?page=2" rel="next" class="next_page">Next →</a>
+</div>
