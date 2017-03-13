@@ -61,4 +61,8 @@ gem 'will_paginate', '~> 3.1.1'
 #include Simple_Form
 gem 'simple_form'
 
+#include Font-Awesome
+gem "font-awesome-rails"
+
+
 
