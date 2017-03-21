@@ -67,5 +67,9 @@ gem "font-awesome-rails"
 #include Devise for User Authentication
 gem 'devise'
 
+#include Geocoder
+gem 'geocoder'
 
+#include Figaro
+gem "figaro"
 
