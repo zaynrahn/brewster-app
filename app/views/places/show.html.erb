@@ -1,8 +1,19 @@
 <div class="booyah-box col-10 col-1">
+  <br/>
   <h1><%= @place.name %></h1><br/>
   <i><%= @place.address %></i><br/><br/>
   <p><%= @place.description %></p>
+  
+  
+  <!--Place Photos-->
+  <div>
+    <% @place.photos.each do |photo| %>
+      <%= image_tag photo.picture, class: 'img-fluid' %>
+      <%= photo.caption %>
+    <% end %>
+  </div>
 
+  <!--Place's map styling and logic-->
   <% if @place.latitude.present? && @place.longitude.present? %>
     <script>
       function initMap() {
@@ -105,6 +116,7 @@
     async defer>
     </script>
 
+    <!--Displays Place Map-->
     <div id="map"></div>
   <% end %>
 
@@ -125,7 +137,7 @@
 <br/>
 
 
-<!-- Modal -->
+<!-- Comment Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -152,7 +164,7 @@
 
 <div class="col-10 offset-1">
   <h1 class="float-left">Comments</h1>
-  <!-- Button trigger modal -->
+  <!-- Comment Button trigger modal -->
   <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">
     Add a Comment
   </button>
@@ -176,6 +188,11 @@
   <% end %>
 </div>
 
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :caption %>
+  <%= f.input :picture %>
+  <%= f.submit "Add Picture", class: "btn btn-primary" %>
+<% end %>
 
 
 

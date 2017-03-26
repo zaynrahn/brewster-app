@@ -73,3 +73,8 @@ gem 'geocoder'
 #include Figaro
 gem "figaro"
 
+#include Carrierwave
+gem 'carrierwave', '~> 1.0'
+
+#include fog
+gem 'fog'
