@@ -59,9 +59,6 @@
   </div>
 <% end %>
 
-
-
 <div class="digg_pagination">
-  <span class="disabled prev_page">← Previous</span>  
-    <a href="./?page=2" rel="next" class="next_page">Next →</a>
+  <%= will_paginate @places, :page_links => false, class: "text-center" %>
 </div>
